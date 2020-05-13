@@ -3,9 +3,6 @@
 	<head>
 		<meta charset="utf-8" />
 		<title></title>
-		<!-- <script src="js/jquery-3.4.1.js" type="text/javascript" charset="utf-8"></script>
-		<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
-		<script src="js/bootstrap.js" type="text/javascript" charset="utf-8"></script> -->
 		
 		<style type="text/css">
 			.nav-bar{
@@ -19,13 +16,19 @@
 			}
 			.menu{
 				color: white;
-				background-color: blue;
+				background-color: #2f4f4f;
 				display: block;
 				text-align: center;
 				text-decoration: none;
+				height: 50px;
+				line-height: 50px; /* 与父元素的高度一致，让文字垂直居中 */
 			}
 			.menu:hover{
-				background-color: yellow;
+				background-color: #2f6f4f;
+			}
+			.secondMenu{
+				list-style-type: none; 
+				padding: 0;
 			}
 		</style>
 		
@@ -47,7 +50,7 @@
 				<li class="list">
 					<a href="#" class="menu" onmouseover="setDisplay('secondmenu1',1);" onmouseout="setDisplay('secondmenu1',0)">first menu1</a>
 					<div id="secondmenu1" style="display: none;">
-						<ul style="list-style-type: none;" >
+						<ul class="secondMenu" onmouseover="setDisplay('secondmenu1',1);" onmouseout="setDisplay('secondmenu1',0)">
 							<li><a href="#" class="menu">second menu1-1</a></li>
 							<li><a href="#" class="menu">second menu1-2</a></li>
 							<li><a href="#" class="menu">second menu1-3</a></li>
@@ -57,30 +60,30 @@
 				
 				<li class="list">
 					<a href="#" class="menu" onmouseover="setDisplay('secondmenu2',1);" onmouseout="setDisplay('secondmenu2',0)">first menu2</a>
-					<!-- <div id="secondmenu2" style="display: none;">
-						<ul style="list-style-type: none;">
+					<div id="secondmenu2" style="display: none;">
+						<ul class="secondMenu" onmouseover="setDisplay('secondmenu2',1);" onmouseout="setDisplay('secondmenu2',0)">
 							<li><a href="#" class="menu">second menu2-1</a></li>
 							<li><a href="#" class="menu">second menu2-2</a></li>
 							<li><a href="#" class="menu">second menu2-3</a></li>
 						</ul>
-					</div> -->
+					</div>
 				</li>
 				
 				<li class="list">
 					<a href="#" class="menu" onmouseover="setDisplay('secondmenu3',1);" onmouseout="setDisplay('secondmenu3',0)">first menu3</a>
-					<!-- <div id="secondmenu3" style="display: none;"> -->
-						<!-- <ul style="list-style-type: none;">
+					<div id="secondmenu3" style="display: none;">
+						<ul class="secondMenu" onmouseover="setDisplay('secondmenu3',1);" onmouseout="setDisplay('secondmenu3',0)">
 							<li><a href="#" class="menu">second menu3-1</a></li>
 							<li><a href="#" class="menu">second menu3-2</a></li>
 							<li><a href="#" class="menu">second menu3-3</a></li>
-						</ul> -->
-					<!-- </div> -->
+						</ul>
+					</div>
 				</li>
 				
 				<li class="list">
 					<a href="#" class="menu" onmouseover="setDisplay('secondmenu4',1);" onmouseout="setDisplay('secondmenu4',0)">first menu4</a>
 					<div id="secondmenu4" style="display: none;">
-						<ul style="list-style-type: none; padding: 0;" onmouseover="setDisplay('secondmenu4',1);" onmouseout="setDisplay('secondmenu4',0)">
+						<ul class="secondMenu" onmouseover="setDisplay('secondmenu4',1);" onmouseout="setDisplay('secondmenu4',0)">
 							<li><a href="#" class="menu">second menu4-1</a></li>
 							<li><a href="#" class="menu">second menu4-2</a></li>
 							<li><a href="#" class="menu">second menu4-3</a></li>
