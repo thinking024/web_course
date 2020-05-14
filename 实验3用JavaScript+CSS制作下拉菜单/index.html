@@ -6,12 +6,12 @@
 		
 		<style type="text/css">
 			.nav-bar{
-				list-style-type: none;
+				list-style-type: none; /*去除列表项前的黑色圆点*/
 				margin: 10px auto;
 				width: 600px;
 			}
 			.list{
-				float: left;
+				float: left; /*列表项全部向左浮动，变为水平导航条*/
 				width: 25%;
 			}
 			.menu{
@@ -19,12 +19,12 @@
 				background-color: #2f4f4f;
 				display: block;
 				text-align: center;
-				text-decoration: none;
+				text-decoration: none; /*去除超链接的下划线*/
 				height: 50px;
 				line-height: 50px; /* 与父元素的高度一致，让文字垂直居中 */
 			}
 			.menu:hover{
-				background-color: #2f6f4f;
+				background-color: #2f6f4f; /*菜单悬停时变色*/
 			}
 			.secondMenu{
 				list-style-type: none; 
@@ -35,9 +35,9 @@
 		<script type="text/javascript">
 			function setDisplay(id,type) {
 				if (type == 1) {
-					document.getElementById(id).style.display="list-item";
+					document.getElementById(id).style.display="list-item"; /*显示元素*/
 				} else{
-					document.getElementById(id).style.display="none";
+					document.getElementById(id).style.display="none"; /*隐藏元素*/
 				}
 				
 			}
@@ -45,7 +45,7 @@
 	</head>
 		
 	<body>
-		<div id="">
+		<div>
 			<ul class="nav-bar">
 				<li class="list">
 					<a href="#" class="menu" onmouseover="setDisplay('secondmenu1',1);" onmouseout="setDisplay('secondmenu1',0)">first menu1</a>
