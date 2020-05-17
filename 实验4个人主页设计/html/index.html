@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>个人主页</title>
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="../css/css.css"/>
+	</head>
+	<body>
+		<div class="container">
+			<div class="row clearfix">
+				<div class="col-md-12 column">
+
+					<!-- autoplay自动播放背景音乐（但是chrome本身禁止网页自动播放，需要用户点击），loop循环播放，preload使得网页加载时同时加载音乐 -->
+					<audio id="bgm" autoplay="autoplay" loop="loop" preload="auto" src="../audio/Mystery%20of%20Love%20.mp3"></audio>
+					
+					<nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: #e3f2fd;">
+					  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+					    <ul class="navbar-nav mr-auto">
+					      <li class="nav-item active"><a class="nav-link" href="index.html">首页<span class="sr-only">(current)</span></a></li>
+					      <li class="nav-item"><a class="nav-link" href="scholar.html">学术成果</a></li>
+						  <li class="nav-item"><a class="nav-link" href="photos.html">个人相册</a></li>
+					      <li class="nav-item"><a class="nav-link" href="code.html" tabindex="-1">开源代码</a></li>
+					    </ul>
+					    <form class="form-inline my-2 my-lg-0">
+					      <button class="btn btn-outline-success my-2 my-sm-0" type="button" onclick="play()" id="musicbutton">播放/暂停音乐</button>
+					    </form>
+					  </div>
+					</nav>
+					<br/>
+					
+					<h1 id="introduction">个人简介</h1><hr />
+					<p>本人从事xxx，xx方向的研究，目前在<a href="http://www.hnust.edu.cn/" target="_blank">湖南科技大学</a>担任xx一职，曾进入xx重点实验室，参与xx和xx项目的开发，主持国家xx和xx等国家自然科学基金项目，在xx和xx等期刊杂志上发表xx文献。现在主要开发中的项目为xxx，有兴趣的朋友可随时<a href="#contact">联系</a>我合作。</p>
+					<br/>
+					
+					<h1>教育经历</h1>
+					<table class="table table-hover">
+						<thead>
+							<tr>
+								<th>时间</th>
+								<th>学校</th>
+								<th>学位</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>xxxx年xx月-xxxx年xx月</td>
+								<td>xx大学</td>
+								<td>博士</td>
+							</tr>
+							<tr>
+								<td>xxxx年xx月-xxxx年xx月</td>
+								<td>xx大学</td>
+								<td>硕士</td>
+							</tr>
+							<tr>
+								<td>xxxx年xx月-xxxx年xx月</td>
+								<td>xx大学</td>
+								<td>学士</td>
+							</tr>
+						</tbody>
+					</table>
+					<br/>
+					
+					<h1>其他</h1><hr />
+					<div>
+						<h2>兴趣爱好</h2>
+						<p>好古典文学，热爱跑步、羽毛球等运动，有空喜欢琢磨电子竞技</p>
+						<br/>
+						
+						<h2>个人收藏</h2>
+						<ul>
+							<li><a href="https://www.bilibili.com/" target="_blank">bilibili</a></li>
+							<li><a href="https://www.zhihu.com/" target="_blank">知乎</a></li>
+							<li><a href="https://v4.bootcss.com/docs/getting-started/introduction/" target="_blank">bootstrap中文文档</a></li>
+							<li><a href="https://docs.microsoft.com/zh-cn/" target="_blank">Microsoft中文文档</a></li>
+						</ul>
+					</div>
+					<br/>
+					
+					<h1 id="contact">联系方式</h1> <hr />
+					<ul>
+						<li>Email：xxxx@hnust.edu.com</li>
+						<li>传真：xxxxxxx</li>
+						<li><a href="https://github.com/thinking024" target="_blank">欢迎访问我的Github</a></li>
+						<li><a href="https://me.csdn.net/qq_43889764" target="_blank">欢迎访问我的博客</a></li>
+					</ul>	
+					<br/>
+					
+					<!-- footer.html是页脚内容，通过iframe引用 -->
+					<iframe src="footer.html" frameborder="0" width="100%" height="80px"></iframe>
+				</div>
+			</div>
+		</div>
+		
+		<script>
+			function play() {
+				var audio = document.getElementById("bgm");
+				if (audio.paused) {
+					audio.play();// 若在播放，则暂停音乐
+				} else {
+					audio.pause();
+				}
+			}
+		</script>
+	</body>
+</html>

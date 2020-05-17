@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>学术成果</title>
+		<script src="js/jquery-3.4.1.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/css.css"/>
+		<script src="../js/jquery-3.4.1.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
+		
+	</head>
+	<body>
+		<div class="container">
+			<div class="row clearfix">
+				<div class="col-md-12 column">
+					<audio id="bgm" autoplay="autoplay" loop="loop" preload="auto" src="../audio/Mystery%20of%20Love%20.mp3"></audio>
+					
+					<nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: #e3f2fd;">
+					  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+					    <ul class="navbar-nav mr-auto">
+					      <li class="nav-item active"><a class="nav-link" href="index.html">首页<span class="sr-only">(current)</span></a></li>
+					      <li class="nav-item"><a class="nav-link" href="scholar.html">学术成果</a></li>
+						  <li class="nav-item"><a class="nav-link" href="photos.html">个人相册</a></li>
+					      <li class="nav-item"><a class="nav-link" href="code.html" tabindex="-1">开源代码</a></li>
+					    </ul>
+					    <form class="form-inline my-2 my-lg-0">
+					      <button class="btn btn-outline-success my-2 my-sm-0" type="button" onclick="play()" id="musicbutton">播放/暂停音乐</button>
+					    </form>
+					  </div>
+					</nav>
+					<br/>
+					
+					<div class="btn-group btn-group-toggle btn-group-lg m-auto" data-toggle="buttons" style="width: 1090px;">
+					  <label class="btn btn-secondary active">
+					    <input type="radio" name="options" id="option1" checked onclick="setDisplay('paper','project','prize')"> 学术作品
+					  </label>
+					  <label class="btn btn-secondary">
+					    <input type="radio" name="options" id="option2" onclick="setDisplay('project','paper','prize')"> 参与项目
+					  </label>
+					  <label class="btn btn-secondary">
+					    <input type="radio" name="options" id="option3" onclick="setDisplay('prize','paper','project')"> 获得奖项
+					  </label>
+					</div>
+					
+					<div id="paper">
+						<h4>投稿论文</h4>
+						<ul>
+							<li><a href="#">《IEEE》xxxxxx</a></li>
+							<li><a href="#">《Science》xxxxxx</a></li>
+							<li><a href="#">《CCF》基于xxxxxx的xxxx</a></li>
+						</ul>
+						
+						<h4>学位论文</h4>
+						<ul>
+							<li><a href="#">博士论文：xxxxx</a></li>
+							<li><a href="#">硕士论文：xxxxx</a></li>
+							<li><a href="#">学士论文：xxxxx</a></li>
+						</ul>
+						
+						<h4>翻译作品</h4>
+						<ul>
+							<li>xxxxxx</li>
+							<li>xxxxxx</li>
+							<li>xxxxxx的xxxx</li>
+						</ul>
+						
+						<h4>出版作品</h4>
+						<ul>
+							<li>《面向对象程序设计》</li>
+							<li>《数据结构与算法》</li>
+							<li>《计算机操作系统》</li>
+						</ul>
+					</div>
+					
+					<div id="project" style="display: none;">
+						<h4>国家自然科学基金项目</h4>
+						<ul>
+							<li>基于xxx的xxxx</li>
+							<li>xxx的探究实验</li>
+						</ul>
+						
+						<h4>省级杰出青年科学项目</h4>
+						<ul>
+							<li>面向xxx的研究</li>
+							<li>基于xxx的xx算法</li>
+						</ul>
+						
+						<h4>企业合作项目</h4>
+						<ul>
+							<li>xxxx</li>
+							<li>xxxx</li>
+							<li>xxxx</li>
+						</ul>
+					</div>
+					
+					<div id="prize" style="display: none;">
+						<h4>国家级奖项</h4>
+						<ul>
+							<li>杰出青年奖</li>
+							<li>科技进步奖</li>
+						</ul>
+						
+						<h4>省级奖项</h4>
+						<ul>
+							<li>xxx省优秀教师</li>
+							<li>xxx省优秀学者奖</li>
+						</ul>
+					</div>
+					
+					<iframe src="footer.html" frameborder="0" width="100%" height="80px"></iframe>
+				</div>
+			</div>
+		</div>
+		
+		<script type="text/javascript">
+			function setDisplay(visibleId,invisibleId1,invisibleId2) {
+				// visibleId为用户点击按钮对应的内容的id，invisibleId为另外两个需要隐藏内容的id
+				document.getElementById(visibleId).style.display="block";
+				document.getElementById(invisibleId1).style.display="none";
+				document.getElementById(invisibleId2).style.display="none";
+			}
+			
+			function play() {
+				var audio = document.getElementById("bgm");
+				if (audio.paused) {
+					audio.play();
+				} else {
+					audio.pause();
+				}
+			}
+		</script>
+		
+	</body>
+</html>

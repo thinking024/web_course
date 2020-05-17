@@ -1,0 +1,21 @@
+body {
+	background-image: url(../img/bgimg.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+a:link {
+	text-decoration: none;
+	color: #138496;
+}
+
+a:hover {
+	text-decoration: underline;
+	color: #007BFF;
+}
+
+a:visited {
+	text-decoration: none;
+	color: darkred;
+}
