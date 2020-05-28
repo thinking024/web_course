@@ -1,8 +1,9 @@
-7<%@ page import="java.util.Random" %>
+<%@ page import="java.util.Random" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
   Random random = new Random();
   int answer = random.nextInt(100) + 1;
+  System.out.println(answer);
 %>
 
 <jsp:useBean id="number" class="bean.Number" scope="session" />

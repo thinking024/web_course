@@ -37,7 +37,8 @@
         out.println("<div>你猜的太小了！</div>");
     }
   %>
-    <form action="answer.jsp"> // 再次提交到本页面
+    <%--再次提交到本页面--%>
+    <form action="answer.jsp">
       <div>请再猜一次</div>
       <input type="number" name="guess" min="0" max="100">
       <input type="submit" value="提交">
